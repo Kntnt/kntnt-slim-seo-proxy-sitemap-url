@@ -30,7 +30,7 @@ add_filter( 'slim_seo_sitemap_post_types', function ( $post_types ) {
         echo implode( "\n", $matches[0] ) . "\n";
     }
 
-    // In lack of an action, we misued a filter, and hence must return the filetered vaklue unchanged.
+    // In lack of an action, a filter was misused, and therefore the filtered value must be returned unchanged.
     return $post_types;
 
 });
