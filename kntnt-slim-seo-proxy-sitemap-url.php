@@ -28,6 +28,7 @@ add_filter( 'slim_seo_sitemap_post_types', function ( $post_types ) {
         // Echo <sitemap><loc>…</loc></sitemap> of the sitemap of the proxied site.
         preg_match_all( '`<sitemap>\s*<loc>[^>]+</loc>\s*</sitemap>`', $sitemap, $matches );
         echo implode( "\n", $matches[0] ) . "\n";
+    
     }
 
     // In lack of an action, a filter was misused, and therefore the filtered value must be returned unchanged.
